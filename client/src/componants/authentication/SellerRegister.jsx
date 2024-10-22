@@ -50,7 +50,7 @@ const RegisterSaller = ({ toggleSellerRegister }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/create",
+        "ecomerace-project-orpin.vercel.app/api/create",
         formData,
         {
           headers: {
