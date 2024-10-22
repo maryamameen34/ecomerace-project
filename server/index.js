@@ -22,7 +22,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(morgan("dev"));
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://ecomerace-project-i8zh.vercel.app/",
     credentials: true
 }));
 
