@@ -22,8 +22,10 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(morgan("dev"));
 app.use(cors({
-    origin: "https://ecomerace-project-i8zh.vercel.app/",
-    credentials: true
+  origin: "https://ecomerace-project-i8zh.vercel.app",
+  credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
 }));
 
 mongoose.connect(process.env.MONGODB_CLOUD, { useNewUrlParser: true, useUnifiedTopology: true });
